@@ -4,5 +4,13 @@
   >
   </app-lista>
 </header>
+<main *ngIf="naipeSelecionado; else semNaipe">
+  {{ naipeSelecionado!.nome }}
+</main>
+<ng-template #semNaipe>
+  <main>
+    Selecione um naipe para começar.
+  </main>
+</ng-template>
 
 <router-outlet></router-outlet>

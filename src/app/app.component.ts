@@ -8,7 +8,9 @@ import { Naipe } from './models/naipe/naipe';
 })
 
 export class AppComponent {
+  public naipeSelecionado?: Naipe
+
   public mostraNaipe(naipe: Naipe) {
-    console.log('naipe', naipe)
+    this.naipeSelecionado = naipe
   }
 }

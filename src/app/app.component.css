@@ -9,3 +9,8 @@
 header {
   width: 100%;
 }
+
+main {
+  margin: 3em 0;
+  text-align: center;
+}
