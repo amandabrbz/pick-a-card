@@ -1,5 +1,10 @@
 <nav id="naipes">
-  <button type="button" *ngFor="let naipe of naipes" class="btn">
+  <button
+    type="button"
+    *ngFor="let naipe of naipes"
+    class="btn"
+    (click)="selecionaNaipe(naipe)"
+  >
     <span class="btn-txt">
       {{ naipe.nome }}
     </span>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Naipe } from 'src/app/models/naipe/naipe';
 
 @Component({
@@ -8,6 +8,9 @@ import { Naipe } from 'src/app/models/naipe/naipe';
 })
 
 export class ListaComponent implements OnInit {
+
+  @Output()
+  public naipeSelecionado: EventEmitter<Naipe> = new EventEmitter();
 
   public naipes: Naipe[] = [
     new Naipe("ouros"),
@@ -21,4 +24,7 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public selecionaNaipe(naipe: Naipe) {
+    this.naipeSelecionado.emit(naipe);
+  }
 }

@@ -7,4 +7,8 @@ export class Carta {
   ) {
 
   }
+
+  public getNaipe(): string {
+    return `${this.naipe.nome}`;
+  }
 }

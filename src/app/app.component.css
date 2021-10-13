@@ -5,3 +5,7 @@
   flex-wrap: wrap;
   position: relative;
 }
+
+header {
+  width: 100%;
+}
