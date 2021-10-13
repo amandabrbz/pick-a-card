@@ -1,16 +1,26 @@
 <header>
-  <app-lista
-    (naipeSelecionado)="mostraNaipe($event)"
-  >
+  <app-lista (naipeSelecionado)="mostraNaipe($event)">
   </app-lista>
+  <app-lista-valores (valorSelecionado)="mostraValor($event)">
+  </app-lista-valores>
 </header>
-<main *ngIf="naipeSelecionado; else semNaipe">
-  {{ naipeSelecionado!.nome }}
+<main>
+  <p *ngIf="naipeSelecionado; else semNaipe">
+    {{ naipeSelecionado!.nome }}
+  </p>
+  <ng-template #semNaipe>
+    <p>
+      Selecione um naipe para começar.
+    </p>
+  </ng-template>
+  <p *ngIf="valorSelecionado; else semValor">
+    {{ valorSelecionado!.nome }}
+  </p>
+  <ng-template #semValor>
+    <p>
+      Selecione um valor para começar.
+    </p>
+  </ng-template>
 </main>
-<ng-template #semNaipe>
-  <main>
-    Selecione um naipe para começar.
-  </main>
-</ng-template>
 
 <router-outlet></router-outlet>

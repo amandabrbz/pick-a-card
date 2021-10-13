@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Naipe } from './models/naipe/naipe';
+import { Valor } from './models/valor/valor';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,13 @@ import { Naipe } from './models/naipe/naipe';
 
 export class AppComponent {
   public naipeSelecionado?: Naipe
+  public valorSelecionado?: Valor
 
   public mostraNaipe(naipe: Naipe) {
     this.naipeSelecionado = naipe
+  }
+
+  public mostraValor(valor: Valor) {
+    this.valorSelecionado = valor
   }
 }

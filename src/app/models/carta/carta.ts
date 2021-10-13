@@ -1,8 +1,9 @@
 import { Naipe } from '../naipe/naipe'
+import { Valor } from '../valor/valor';
 
 export class Carta {
   constructor(
-    public valor: string,
+    public valor: Valor,
     public naipe: Naipe,
   ) {
 
@@ -10,5 +11,9 @@ export class Carta {
 
   public getNaipe(): string {
     return `${this.naipe.nome}`;
+  }
+
+  public getValorCarta(): string {
+    return `${this.valor.nome}`;
   }
 }

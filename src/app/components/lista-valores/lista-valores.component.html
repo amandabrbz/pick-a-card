@@ -1,0 +1,12 @@
+<nav id="valores">
+  <button
+    type="button"
+    *ngFor="let valor of valores"
+    class="btn"
+    (click)="selecionaValor(valor)"
+  >
+    <span class="btn-txt">
+      {{ valor.nome }}
+    </span>
+  </button>
+</nav>
