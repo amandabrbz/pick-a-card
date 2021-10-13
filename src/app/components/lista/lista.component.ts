@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Nipe } from 'src/app/models/nipe/nipe';
+import { Naipe } from 'src/app/models/naipe/naipe';
 
 @Component({
   selector: 'app-lista',
@@ -9,11 +9,11 @@ import { Nipe } from 'src/app/models/nipe/nipe';
 
 export class ListaComponent implements OnInit {
 
-  public nipes: Nipe[] = [
-    new Nipe("ouros"),
-    new Nipe("copas"),
-    new Nipe("paus"),
-    new Nipe("espadas"),
+  public naipes: Naipe[] = [
+    new Naipe("ouros"),
+    new Naipe("copas"),
+    new Naipe("paus"),
+    new Naipe("espadas"),
   ]
 
   constructor() { }

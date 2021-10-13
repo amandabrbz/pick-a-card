@@ -1,4 +1,4 @@
-export class Nipe {
+export class Naipe {
   constructor(
     public nome: string,
   ) {
