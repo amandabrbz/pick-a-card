@@ -1,0 +1,7 @@
+:host {
+  max-width: 800px;
+  margin: 3em auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
